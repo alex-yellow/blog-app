@@ -1,0 +1,20 @@
+<h1>Task</h1>
+
+<table>
+    <thead>
+        <th>Task</th>
+        <th>Status</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{task.title}}</td>
+            {{#if task.completed}}
+                <td>Completed</td>
+            {{else}}
+            <td>Not completed</td>
+            {{/if}}
+        </tr>
+    </tbody>
+</table>
+
+<h3><a href="/">At Home</a></h3>

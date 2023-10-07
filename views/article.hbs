@@ -1,0 +1,35 @@
+<h1>{{article.title}}</h1>
+<hr>
+<div class="content">
+    <h2>{{article.subcontent}}</h2>
+    <hr>
+    <h3>{{article.content}}</h3>
+</div>
+<hr>
+<div class="author">
+    <h3>Author of the article - {{article.username}}</h3>
+    <hr>
+    <h3>Date of publication - {{article.createdAt}}</h3>
+</div>
+<hr>
+<div class="comments">
+    <h2>Comments: </h2>
+    {{#each comments}}
+    <div class="content">
+        <hr>
+        <h3>New Comment</h3>
+        <p>Author - {{author}}</p>
+        <p>Text - {{commentText}}</p>
+        <hr>
+    </div>
+    {{/each}}
+    <form action="/comments" method="post">
+    <input type="hidden" name="id" value="{{article.id}}">
+        <label for="author">Author: </label><br><br>
+        <input type="text" name="author" placeholder="Enter you name" required><br><br>
+        <label for="commentText">Text: </label><br><br>
+        <textarea name="commentText" id="" cols="30" rows="10" placeholder="Enter you comment"></textarea><br><br>
+        <button type="submit">Add</button>
+    </form>
+</div>
+<h3><a href="/">At Home</a></h3>

@@ -1,0 +1,15 @@
+.add{
+    background: rgb(214, 236, 214);
+    font-size: 20px;
+}
+.edit{
+    background: rgb(214, 236, 214);
+    font-size: 20px;
+}
+.delete{
+    background: rgb(214, 236, 214);
+    font-size: 20px;
+}
+.error{
+    background: red;
+}

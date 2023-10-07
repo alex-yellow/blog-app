@@ -1,0 +1,19 @@
+<h1>Add Article</h1>
+
+<form action="/add" method="post">
+    <label for="title">Title: </label><br><br>
+    <input type="text" name="title" required><br><br>
+    <label for="subcontent">Subcontent: </label><br><br>
+    <textarea name="subcontent" id="" cols="30" rows="10" required></textarea><br><br>
+    <label for="content">Content: </label><br><br>
+    <textarea name="content" id="" cols="30" rows="10" required></textarea><br><br>
+    <label for="user_id">Author: </label>
+    <select name="user_id" id="">
+        {{#each users}}
+        <option value="{{id}}">{{username}}</option>
+        {{/each}}
+    </select><br><br>
+    <button type="submit">Add</button>
+</form>
+
+<h3><a href="/admin">At Admin</a></h3>

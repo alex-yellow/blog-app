@@ -1,0 +1,19 @@
+<h1>Articles</h1>
+{{#if user}}
+<h2><a href="/admin">Admin Panel</a></h2>
+<h2><a href="/logout">Logout</a></h2>
+{{else}}
+<h2><a href="/register">Sign Up</a></h2>
+<h2><a href="/login">Sign In</a></h2>
+{{/if}}
+
+{{#each articles}}
+    <div>
+        <h2><a href="/articles/{{id}}">{{title}}</a></h2>
+        <h3>{{subcontent}}</h3>
+        <h4>Дата публикации - {{createdAt}}</h4>
+        <h4>Автор статьи - {{username}}</h4>
+    </div>
+    <hr>
+{{/each}}
+
